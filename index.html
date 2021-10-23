@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="tablet">
+        <div class="left_txt">
+            <a href="#">온오프</a>
+            <a href="#">회전</a>
+        </div>
+        <img src="img/tablet.png" alt="타블렛">
+        <div class="section">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+        
+            <div class="slide_wrap">
+                <div class="slide_wrap_in">
+                    <div class="slide slide1">
+                    <h1>프로필</h1>
+                    <ul>
+                        <li class="t1">
+                            <div><img src="img/profile_thum.png" alt="프로필"></div>
+                            <p>프로필</p>
+                        </li>
+                        <li class="t2">
+                            <div><img src="img/skill.png" alt="스킬"> </div>                      
+                            <p>스킬</p>
+                        </li>
+                    </ul>
+                    <div class="sns">
+                        <div class="sns_bg"></div>
+                        <div class="sns_in">
+                            <a href="#" class="call"><img src="icon/call.png" alt="전화"></a>
+                            <a href="http://www.google.com" target="blank_"><img src="icon/google.png" alt="구글"></a>
+                            <a href="http://www.facebook.com/dlwlrua" target="blank_"><img src="icon/facebook.png" alt="페이스북"></a>
+                            <a href="http://www.instagram.com/dlwlrua111" target="blank_"><img src="icon/instagram.png" alt="인스타그램"></a>
+                        </div>
+                    </div><!-- sns end-->
+                    </div><!-- slide1 end -->
+                    <div class="slide slide2">
+                    <h1>목업</h1>
+                    <ul>
+                        <li class="t1">
+                            <div><img src="img/book_thum.png" alt="북커버"></div>
+                            <p>북커버</p>
+                        </li>
+                        <li class="t2">
+                            <div><img src="img/business_thum.png" alt="명함"> </div>                      
+                            <p>명함</p>
+                        </li>
+                        <li class="t3">
+                        <div><img src="img/case_thum.png" alt="시디케이스"></div>          
+                            <p>시디 케이스</p>
+                        </li>
+                        <li class="t4">
+                        <div><img src="img/leaflet_thum.png" alt="3단리플렛"></div>
+                            <p>3단 리플렛</p>
+                        </li>
+                    </ul>
+                    <div class="sns">
+                        <div class="sns_bg"></div>
+                        <div class="sns_in">
+                            <a href="#" class="call"><img src="icon/call.png" alt="전화"></a>
+                            <a href="http://www.google.com" target="blank_"><img src="icon/google.png" alt="구글"></a>
+                            <a href="http://www.facebook.com/dlwlrua" target="blank_"><img src="icon/facebook.png" alt="페이스북"></a>
+                            <a href="http://www.instagram.com/dlwlrua111" target="blank_"><img src="icon/instagram.png" alt="인스타그램"></a>
+                        </div>
+                    </div><!-- sns end-->
+                    </div><!-- slide2 end -->
+                    <div class="slide slide3">
+                    <h1>홈페이지 리뉴얼</h1>
+                    <ul>
+                        <li class="t1">
+                            <div><img src="img/Edam_thum.png" alt="이담엔터테인먼트"></div>
+                            <p>이담 엔터테인먼트</p>
+                        </li>
+                        <li class="t2">
+                            <div><img src="img/lock_thum.png" alt="락앤락"> </div>                      
+                            <p>락앤락</p>
+                        </li>
+                        <li class="t3">
+                        <div><img src="img/10minute_thum.png" alt="10분독서"></div>          
+                            <p>10분 독서</p>
+                        </li>
+                        <li class="t4">
+                        <div><img src="img/leagueoflegends_thum.png" alt="리그오브레전드"></div>
+                            <p>리그오브레전드</p>
+                        </li>
+                        <li class="t5">
+                        <div><img src="img/stussy_thum.png" alt="스투시"></div>
+                            <p>스투시</p>
+                        </li>
+                    </ul>
+                    <div class="sns">
+                        <div class="sns_bg"></div>
+                        <div class="sns_in">
+                            <a href="#" class="call"><img src="icon/call.png" alt="전화"></a>
+                            <a href="http://www.google.com" target="blank_"><img src="icon/google.png" alt="구글"></a>
+                            <a href="http://www.facebook.com/dlwlrua" target="blank_"><img src="icon/facebook.png" alt="페이스북"></a>
+                            <a href="http://www.instagram.com/dlwlrua111" target="blank_"><img src="icon/instagram.png" alt="인스타그램"></a>
+                        </div>
+                    </div><!-- sns end-->
+                    </div><!-- slide3 end -->
+                </div><!-- slide_wrap_in end -->
+                <div class="slide-control">
+		    		<div>
+		    			<label for="slide03" class="left"></label>
+		    			<label for="slide02" class="right"></label>
+		    		</div>
+		    		<div>
+		    			<label for="slide01" class="left"></label>
+		    			<label for="slide03" class="right"></label>
+		    		</div>
+		    		<div>
+		    			<label for="slide02" class="left"></label>
+		    			<label for="slide01" class="right"></label>
+		    		</div>
+		    	</div><!-- next, prev end-->
+                <ul class="slide-pagelist">
+                    <li><label for="slide01"></label></li>
+                    <li><label for="slide02"></label></li>
+                    <li><label for="slide03"></label></li>
+                </ul>
+            </div><!-- slide_wrap end-->
+        </div>
+        <a href="#" class="tablet_btn">on/off</a>
+        <a href="#" class="tablet_rotate">rotate</a>
+        <div class="right_txt">
+            <a href="#"><img src="img/mobile_qr2.png" alt="모바일큐알"></a>
+        </div>
+        <!-- <div class="background">
+            <img src="img/coffee.png" alt="배경">
+        </div> -->
+    </div><!-- tablet end -->
+    <div class="loading">
+        <p>배찬겸</p>
+        <ul>
+            <li>P</li>
+            <li>O</li>
+            <li>R</li>
+            <li>T</li>
+            <li>F</li>
+            <li>O</li>
+            <li>L</li>
+            <li>I</li>
+            <li>O</li>
+        </ul>
+    </div>
+    <!-- loading end -->
+    <div class="tablet_on">
+        <!-- <img src="icon/uparrow-white.png" alt="위화살표">
+        <p>click!</p> -->
+    </div><!-- tablet_on end -->
+    <div class="popup popup1">
+        
+        <div class="popup_in p1">
+            <div class="close"><img src="icon/close-white.png" alt="닫기"></div>
+            <img src="img/profile.png" alt="프로필">
+            <div class="square square1">
+                <span></span>
+                <span class="dot1"></span>
+                <span></span>
+                <span class="dot4"></span>
+                <span></span>
+                <span class="dot2"></span>
+                <span></span>
+                <span class="dot1"></span>
+                <span></span>
+                <span></span>
+                <span class="dot3"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="dot2"></span>
+                <span></span>
+                <span class="dot4"></span>
+                <span></span>
+                <span class="dot3"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="dot4"></span>
+                <span></span>
+                <span class="dot2"></span>
+            </div><!-- square1 end-->
+            <div class="square square2">
+                <span></span>
+                <span class="dot1"></span>
+                <span></span>
+                <span class="dot4"></span>
+                <span></span>
+                <span class="dot2"></span>
+                <span></span>
+                <span class="dot1"></span>
+                <span></span>
+            </div><!-- square2 end-->
+            <div class="circle">
+                <img src="img/circle.png" alt="원">
+                <div class="grey_circle"></div>
+            </div>
+        </div>
+        <div class="popup_in p2">
+            <div class="close"><img src="icon/close-white.png" alt="닫기"></div>
+            <div class="skill_wrap">
+                <div class="skill">
+                    <p>HTML5</p>
+                    <div class="skillbar html5"><span>90%</span></div>
+                </div>
+                <div class="skill">
+                    <p>CSS3</p>
+                    <div class="skillbar css3"><span>85%</span></div>
+                </div>
+                <div class="skill">
+                    <p>JQUERY</p>
+                    <div class="skillbar jquery"><span>70%</span></div>
+                </div>
+                <div class="skill">
+                    <p>JAVASCRIPT</p>
+                    <div class="skillbar javascript"><span>50%</span></div>
+                </div>
+                <div class="skill">
+                    <p>PHOTOSHOP</p>
+                    <div class="skillbar photoshop"><span>85%</span></div>
+                </div>
+                <div class="skill">
+                    <p>ILLUSTRATOR</p>
+                    <div class="skillbar illustrator"><span>60%</span></div>
+                </div>
+                <div class="desc desc-html5">
+                    <h3>HTML5</h3>
+                    <p>페이지의 구조를 파악한 후 html로 표현이 가능함</p>
+                    <p>html의 태그들에 대한 이해가 높고 적절하게 사용 가능함</p>
+                </div>
+                <div class="desc desc-css3">
+                    <h3>CSS3</h3>
+                    <p>html에 스타일을 추가하기 위한 수준 높은 지식을 갖춤</p>
+                    <p>원하는 스타일을 추가할 수 있는 역량을 갖춤</p>
+                    <p>동적인 페이지를 위한 기능을 만들 수 있음</p>
+                </div>
+                <div class="desc desc-jquery">
+                    <h3>JQUERY</h3>
+                    <p>동적인 페이지를 위한 몇가지 기능을 만들 수 있음</p>
+                    <p>함수를 조합하여 css로 불가능한 기능을 만들 수 있음</p>
+                    <p>지속적인 학습을 통하여 완성도 높은 jquery를 구사 할 역량을 갖추는 중</p>
+                </div>
+                <div class="desc desc-javascript">
+                    <h3>JAVASCIRPT</h3>
+                    <p>기초적인 지식 보유중</p>
+                    <p>jquery와 더불어 지속적인 학습을 통하여 수준 높은 역량을 갖추는 중</p>
+                </div>
+                <div class="desc desc-photoshop">
+                    <h3>PHOTOSHOP</h3>
+                    <p>이미지를 원하는 방향으로 수정할 수 있음</p>
+                    <p>펜툴을 수준 높은 수준으로 다룰 수 있음</p>
+                </div>
+                <div class="desc desc-illustrator">
+                    <h3>ILLUSTRATOR</h3>
+                    <p>기본적인 툴을 다를 수 있음</p>
+                    <p>원하는 이미지를 기본적으로 만들 수 있음</p>
+                </div>
+            </div><!-- skill_wrap end -->
+        </div><!-- p2 end -->
+    </div><!-- popup1 end-->
+    <div class="popup popup2">
+        <div class="popup_in p1">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div class="popup_in_wrap">
+                <div><img src="img/bookmockup.png" alt="북목업"></div>
+                <div><img src="img/bookcover.png" alt="북커버"></div>
+            </div>
+            <a href="#" class="popup2_btn1">1</a>
+            <a href="#" class="popup2_btn2">2</a>
+        </div>
+        <div class="popup_in p2">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div class="popup_in_wrap">
+                <div><img src="img/namecardmockup.png" alt="명함목업1"></div>
+                <div><img src="img/namecardmockup2.png" alt="명함목업2"></div>
+            </div>
+            <a href="#" class="popup2_btn1">1</a>
+            <a href="#" class="popup2_btn2">2</a>
+        </div> 
+        <div class="popup_in p3">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div class="popup_in_wrap">
+                <div><img src="img/cdcasemockup1.png" alt="시디케이스목업1"></div>
+                <div><img src="img/cdcasemockup2.png" alt="시디케이스목업2"></div>
+            </div>
+            <a href="#" class="popup2_btn1">1</a>
+            <a href="#" class="popup2_btn2">2</a>
+        </div> 
+        <div class="popup_in p4">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div class="popup_in_wrap">
+                <div><img src="img/leafletmockup1.png" alt="리플렛목업1"></div>
+                <div><img src="img/leafletmockup2.png" alt="리플렛목업2"></div>
+            </div>
+            <a href="#" class="popup2_btn1">1</a>
+            <a href="#" class="popup2_btn2">2</a>
+        </div> 
+    </div><!-- popup2 end-->
+    <div class="popup popup3">
+        <div class="popup_in p1">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div><img src="img/EDAM_home.png" alt="이담 엔터테인먼트"></div>
+            <div class="popup_in_txt">
+                <div class="popup_in_border">
+                    <h1>이담 엔터테인먼트</h1>
+                    <p>벤치마킹 : 노브랜드</p>
+                    <p>브라우저 : pc, mobile</p>
+                    <p>사용스킬 : html, css, jquery, fullpage.js</p>
+                    <p>메인색상 : <span></span>#ab8ac7, <span></span>#333</p>
+                    <p>메인폰트 : 나눔 고딕</p>
+                    <p>
+                        <a href="http://www.nobland.com" target="blank_">original</a>
+                        <a href="http://dlwlrua.dothome.co.kr/EDAM" target="blank_">renewal</a>
+                        <span><img src="img/EDAM.qr.png" alt="이담 모바일"></span>
+                    </p>
+                </div><!-- popup_in_border -->
+            </div>
+        </div><!-- popup_in -->
+        <div class="popup_in p2">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div><img src="img/locknlock_home.png" alt="락앤락"></div>
+            <div class="popup_in_txt">
+                <div class="popup_in_border">
+                    <h1>락앤락</h1>
+                    <p>벤치마킹 : 창경궁</p>
+                    <p>브라우저 : pc, mobile</p>
+                    <p>사용스킬 : html, css, bootstrap</p>
+                    <p>메인색상 : <span></span>#333, <span></span>#fff</p>
+                    <p>메인폰트 : 나눔 고딕</p>
+                    <p>
+                        <a href="http://cgg.cha.go.kr" target="blank_">original</a>
+                        <a href="http://dlwlrua.dothome.co.kr/LocknLock" target="blank_">renewal</a>
+                        <span><img src="img/locknlock.qr.png" alt="락앤락 모바일"></span>
+                    </p>
+                </div><!-- popup_in_border -->
+            </div>
+        </div><!-- popup_in --> 
+        <div class="popup_in p3">
+            <div class="close"><img src="icon/close-white.png" alt="닫기"></div>
+            <div><img src="img/10minute_home2.png" alt="10분독서"></div>
+            <div class="popup_in_txt">
+                <div class="popup_in_border">
+                    <h1>10분 독서</h1>
+                    <p>벤치마킹 : 와플 대학</p>
+                    <p>브라우저 : pc</p>
+                    <p>사용스킬 : html, css, jquery</p>
+                    <p>메인색상 : <span></span>#fed572, <span></span>#fff</p>
+                    <p>메인폰트 : 나눔 고딕</p>
+                    <p>
+                        <a href="http://www.waffleuniv.com" target="blank_">original</a>
+                        <a href="http://dlwlrua.dothome.co.kr" target="blank_">renewal</a>
+                    </p>
+                </div><!-- popup_in_border -->
+            </div>
+        </div><!-- popup_in --> 
+        <div class="popup_in p4">
+            <div class="close"><img src="icon/close-white.png" alt="닫기"></div>
+            <div><img src="img/lol_home.png" alt="리그오브레전드"></div>
+            <div class="popup_in_txt">
+                <div class="popup_in_border">
+                    <h1>리그오브레전드</h1>
+                    <p>벤치마킹 : 시코르</p>
+                    <p>브라우저 : pc</p>
+                    <p>사용스킬 : html, css, jquery, bxslider</p>
+                    <p>메인색상 : <span></span>#94c5df, <span></span>#8280a0</p>
+                    <p>메인폰트 : 나눔 고딕</p>
+                    <p>
+                        <a href="http://chicor.com" target="blank_">original</a>
+                        <a href="http://dlwlrua.dothome.co.kr/lol2" target="blank_">renewal</a>
+                    </p>
+                </div><!-- popup_in_border -->
+            </div>
+        </div><!-- popup_in --> 
+        <div class="popup_in p5">
+            <div class="close"><img src="icon/close.png" alt="닫기"></div>
+            <div><img src="img/stussy_home.png" alt="스투시"></div>
+            <div class="popup_in_txt">
+                <div class="popup_in_border">
+                    <h1>스투시</h1>
+                    <p>벤치마킹 : free</p>
+                    <p>브라우저 : mobile</p>
+                    <p>사용스킬 : html, css, jquery, swiper-slider</p>
+                    <p>메인색상 : <span></span>#000, <span></span>#fff</p>
+                    <p>메인폰트 : 나눔 고딕</p>
+                    <p>
+                        <a href="http://dlwlrua.github.io/stussy" target="blank_">free</a>
+                        <!-- <a href="http://dlwlrua.dothome.co.kr/lol2" target="blank_">renewal</a> -->
+                        <span><img src="img/stussy.qr.png" alt="스투시 모바일"></span>
+                    </p>
+                </div><!-- popup_in_border -->
+            </div>
+        </div><!-- popup_in -->
+    </div><!-- popup3 end-->
+    <div class="call_in">
+            <div class="indicator call_in_call"><span>전화번호</span><br>010-4342-2396</div>
+            <div class="indicator call_in_mail"><span>이메일 주소</span><br>mtm6220@naver.com</div>
+            <div class="indicator call_in_address"><span>집 주소</span><br>경기도 파주</div>
+            <div class="indicator call_in_facebook"><span>페이스북 주소</span><br>www.facebook.com/dlwlrua</div>
+            <div class="indicator call_in_instagram"><span>인스타그램 주소</span><br>www.instagram.com/dlwlrua111</div>
+        <div class="call_in_icon">
+            <ul>
+                <li><a href="#" class="c1"></a></li>
+                <li><a href="#" class="c2"></a></li>
+                <li><a href="#" class="c3"></a></li>
+                <li><a href="#" class="c4"></a></li>
+                <li><a href="#" class="c5"></a></li>
+                <li><a href="#" class="c6"></a></li>
+            </ul>
+        </div>
+        <div class="call_in_close">
+            <a href="#"></a>
+        </div>
+    </div><!-- call_in end -->
+</body>
+</html>
