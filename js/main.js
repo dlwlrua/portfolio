@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(function () {
     let num=0;
-    $('.tablet_btn').click(function(){
+    $('.left_txt a:first-child').click(function(){
         if(num==0){
             $('.tablet img').addClass('active');
             $('.tablet_on').addClass('active');
@@ -19,11 +19,13 @@ $(document).ready(function(){
             $('.call_in .indicator').css('display','none');
             $('.call_in').removeClass('active');
             $('.tablet > img').removeClass('rotate');
+            $('.slide_wrap').removeClass('rotate');
             $('.popup2 p1').removeClass('active');
             $('.bx-wrapper').removeClass('active');
             $('.popup2 .popup_in_wrap div').css('transform','translate(0)');
             $('.popup2 a:nth-child(2)').addClass('active');
             $('.popup2 a:nth-child(3)').removeClass('active');
+            
         }
     });
     let num2=0;
@@ -271,14 +273,6 @@ $(document).ready(function(){
 
     });
 
-    
-
-    //slide 슬라이드 버튼
-    
-
-    // next , prev 
-
-
 
 
     // 회전이미지 클릭시 패드이미지 회전
@@ -301,3 +295,7 @@ $(document).ready(function(){
         $('.popup2 .popup_in a:nth-child(3)').removeClass('active');
     });
 });
+
+if($(window).width() <= 480){
+    
+}
