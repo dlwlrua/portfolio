@@ -1117,6 +1117,8 @@ body.active {
 @media screen and (max-width: 480px) {
   body {
     white-space: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   .tablet > img {
     display: none;
@@ -1138,7 +1140,7 @@ body.active {
     text-align: center;
     line-height: 37.5vw;
     margin: 0 auto;
-    margin-top: 50vw;
+    margin-top: 60vw;
   }
   .loading ul {
     display: block;
