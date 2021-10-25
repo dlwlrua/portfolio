@@ -1152,7 +1152,7 @@ body.active {
     margin-top: 5vw;
   }
   .loading ul li {
-    font-size: 2vw;
+    font-size: 3.5vw;
     letter-spacing: 0.5vw;
   }
   .loading ul li:first-child {
@@ -1201,15 +1201,15 @@ body.active {
     }
   }
   .slide_wrap {
-    width: 480px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
   .slide_wrap .slide_wrap_in {
-    width: 1440px;
-    height: 100vh;
+    width: 300%;
+    height: 100%;
   }
   .slide_wrap .slide_wrap_in .slide {
-    width: 480px;
+    width: 33.3%;
     height: 100%;
   }
   /* 페이지네이션 */
@@ -1278,7 +1278,7 @@ body.active {
   margin-top: 1vw;
 }
 .slide ul li {
-  width: 25vw;
+  width: 24vw;
   font-family: "HSYuji-Regular";
 }
 .slide ul li div {
