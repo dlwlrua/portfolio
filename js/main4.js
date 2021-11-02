@@ -1,17 +1,17 @@
-$(function () {
+$(document).ready(function(){
     let num=0;
-    $('.left_txt a:first-child').click(function(){
-        
+    $('.tablet_btn').click(function(){
         if(num==0){
             $('.tablet img').addClass('active');
             $('.tablet_on').addClass('active');
             $('body').addClass('active');
-            $('.loading').delay(1500).fadeOut();
-            $('.left_txt a:first-child').addClass('active');
             num=1;
+            $('.loading').delay(3000).fadeOut();
+            $('.left_txt a:first-child').addClass('active');
         }else{
             $('.tablet img').removeClass('active');
             $('.tablet_on').removeClass('active');
+            num=0;
             $('.loading').show(1500);
             $('body').removeClass('active');
             $('.popup div').removeClass('active');
@@ -19,13 +19,21 @@ $(function () {
             $('.call_in .indicator').css('display','none');
             $('.call_in').removeClass('active');
             $('.tablet > img').removeClass('rotate');
-            $('.slide_wrap').removeClass('rotate');
             $('.popup2 p1').removeClass('active');
             $('.bx-wrapper').removeClass('active');
             $('.popup2 .popup_in_wrap div').css('transform','translate(0)');
-            $('.popup2 a:nth-child(4)').addClass('active');
-            $('.popup2 a:nth-child(5)').removeClass('active');
-            num=0;
+            $('.popup2 a:nth-child(2)').addClass('active');
+            $('.popup2 a:nth-child(3)').removeClass('active');
+        }
+    });
+    let num2=0;
+    $('.tablet_rotate').click(function(){
+        if(num2==0){
+            $('.left_txt a:last-child').addClass('active');
+            num2=1;
+        }else{
+            $('.left_txt a:last-child').removeClass('active');
+            num2=0;
         }
     });
     
@@ -39,7 +47,6 @@ $(function () {
     $('.slide1 .t2').click(function(){
         $('.popup1 .p2').addClass('active');
         $('.popup1 .close').addClass('active');
-        
         setTimeout(function(){
             $('.skill .html5').addClass('active');
             $('.skill .css3').addClass('active');
@@ -49,11 +56,6 @@ $(function () {
             $('.skill .illustrator').addClass('active');
             $('.skill span').addClass('active');
         },1000);
-        setTimeout(function(){
-            
-            $('.desc-html5').fadeIn();
-        },2000);
-
     });
 
     // slide2 팝업
@@ -130,7 +132,6 @@ $(function () {
         $('.skill .photoshop').removeClass('active');
         $('.skill .illustrator').removeClass('active');
         $('.skill span').removeClass('active');
-        $('.desc-html5').fadeOut();
     });
 
     // 팝업2 닫기
@@ -139,9 +140,8 @@ $(function () {
         $('.close').removeClass('active');
         $('.popup2 p1').removeClass('active');
         $('.popup2 .popup_in_wrap div').css('transform','translate(0)');
-        $('.popup2 .popup_in_wrap2 div').css('transform','translate(0)');
-        $('.popup2 a:nth-child(4)').addClass('active');
-        $('.popup2 a:nth-child(5)').removeClass('active');
+        $('.popup2 a:nth-child(3)').addClass('active');
+        $('.popup2 a:nth-child(4)').removeClass('active');
         setTimeout(function(){
             $('.tablet > img').removeClass('rotate');
             $('.slide_wrap').removeClass('rotate');
@@ -154,47 +154,41 @@ $(function () {
         $(this).parent('div').removeClass('active');
         $('.close').removeClass('active');
         $('.popup3 .popup_in .popup_in_txt').removeClass('active');
-        
     });
 
     // 스킬바 설명
-    $('.html5').click(function(){
+    $('.html5').mouseover(function(){
         $('.desc-html5').css('display','block');
     $('.html5').mouseout(function(){
         $('.desc-html5').css('display','none');
         });
     });
-    $('.css3').click(function(){
+    $('.css3').mouseover(function(){
         $('.desc-css3').css('display','block');
-        $('.desc-html5').css('display','none');
     $('.css3').mouseout(function(){
         $('.desc-css3').css('display','none');
         });
     });
-    $('.jquery').click(function(){
+    $('.jquery').mouseover(function(){
         $('.desc-jquery').css('display','block');
-        $('.desc-html5').css('display','none');
     $('.jquery').mouseout(function(){
         $('.desc-jquery').css('display','none');
         });
     });
-    $('.javascript').click(function(){
+    $('.javascript').mouseover(function(){
         $('.desc-javascript').css('display','block');
-        $('.desc-html5').css('display','none');
     $('.javascript').mouseout(function(){
         $('.desc-javascript').css('display','none');
         });
     });
-    $('.photoshop').click(function(){
+    $('.photoshop').mouseover(function(){
         $('.desc-photoshop').css('display','block');
-        $('.desc-html5').css('display','none');
     $('.photoshop').mouseout(function(){
         $('.desc-photoshop').css('display','none');
         });
     });
-    $('.illustrator').click(function(){
+    $('.illustrator').mouseover(function(){
         $('.desc-illustrator').css('display','block');
-        $('.desc-html5').css('display','none');
     $('.illustrator').mouseout(function(){
         $('.desc-illustrator').css('display','none');
         });
@@ -277,6 +271,59 @@ $(function () {
 
     });
 
+    
+
+    //slide 슬라이드 버튼
+    $('.slide_wrap .pagination span:first-child').addClass('active');
+    $('.slide_wrap .pagination span:first-child').click(function(){
+        $('.slide_wrap .slide_wrap_in .slide').css('transform','translate(0)');
+        $('.slide_wrap .pagination span:first-child').addClass('active');
+        $('.slide_wrap .pagination span:nth-child(2)').removeClass('active');
+        $('.slide_wrap .pagination span:last-child').removeClass('active');
+    });
+    $('.slide_wrap .pagination span:nth-child(2)').click(function(){
+        $('.slide_wrap .slide_wrap_in .slide').css('transform','translate(-24.9vw)');
+        $('.slide_wrap .pagination span:nth-child(2)').addClass('active');
+        $('.slide_wrap .pagination span:first-child').removeClass('active');
+        $('.slide_wrap .pagination span:last-child').removeClass('active');
+    });
+    $('.slide_wrap .pagination span:last-child').click(function(){
+        $('.slide_wrap .slide_wrap_in .slide').css('transform','translate(-49.8vw)');
+        $('.slide_wrap .pagination span:last-child').addClass('active');
+        $('.slide_wrap .pagination span:nth-child(2)').removeClass('active');
+        $('.slide_wrap .pagination span:first-child').removeClass('active');
+    });
+
+    // next , prev 
+    let swi = document.querySelector('.slide_wrap_in'),
+    slide = document.querySelectorAll('.slide_wrap_in .slide'),
+    currentIdx = 0,
+    slideCount = slide.length,
+    prevBtn = document.querySelector('.prev'),
+    slideWidth = 24.9,
+    nextBtn = document.querySelector('.next');
+
+    swi.style.width = slideWidth * slideCount + 'vw';
+
+    function moveSlide(num) {
+        swi.style.left = -num * 24.9 + 'vw';
+        currentIdx = num;
+    }
+    nextBtn.addEventListener('click', function(){
+        if(currentIdx < slideCount - 1){
+            moveSlide(currentIdx + 1);
+        }else{
+            moveSlide(0);
+        }
+    }); 
+    prevBtn.addEventListener('click', function(){
+        if(currentIdx > 0){
+            moveSlide(currentIdx - 1);
+        }else{
+            moveSlide(slideCount - 1);
+        }
+    }); 
+
 
 
     // 회전이미지 클릭시 패드이미지 회전
@@ -287,30 +334,15 @@ $(function () {
 
 
     // slide2 팝업 슬라이드 버튼
-    $('.popup2 a:nth-child(4)').addClass('active');
+    $('.popup2 a:nth-child(3)').addClass('active');
     $('.popup2_btn1').click(function(){
         $('.popup2 .popup_in_wrap div').css('transform','translate(0)');
-        $('.popup2 .popup_in a:nth-child(4)').addClass('active');
-        $('.popup2 .popup_in a:nth-child(5)').removeClass('active');
+        $('.popup2 .popup_in a:nth-child(3)').addClass('active');
+        $('.popup2 .popup_in a:nth-child(4)').removeClass('active');
     });
     $('.popup2_btn2').click(function(){
         $('.popup2 .popup_in_wrap div').css('transform','translate(-37.6vw)');
-        $('.popup2 .popup_in a:nth-child(5)').addClass('active');
-        $('.popup2 .popup_in a:nth-child(4)').removeClass('active');
-    });
-    
-    if($(window).width() <= 480){
-        $('.popup2 a:nth-child(4)').addClass('active');
-    $('.popup2_btn1').click(function(){
-        $('.popup2 .popup_in_wrap2 div').css('transform','translate(0)');
         $('.popup2 .popup_in a:nth-child(4)').addClass('active');
-        $('.popup2 .popup_in a:nth-child(5)').removeClass('active');
+        $('.popup2 .popup_in a:nth-child(3)').removeClass('active');
     });
-    $('.popup2_btn2').click(function(){
-        $('.popup2 .popup_in_wrap2 div').css('transform','translateY(-100vh)');
-        $('.popup2 .popup_in a:nth-child(5)').addClass('active');
-        $('.popup2 .popup_in a:nth-child(4)').removeClass('active');
-    });
-    }
 });
-

@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+@font-face {
+  font-family: "HSYuji-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-family: "Nanum Gothic", sans-serif;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  overflow-y: hidden;
+  position: relative;
+  background-image: url(../img/abstract.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 5s;
+  transform: rotate(-90deg);
+}
+body.active {
+  background-image: url(../img/coffe_blur.png);
+}
+.tablet {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+/* 왼쪽 텍스트 */
+.left_txt {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: 10vw;
+  color: #fff;
+  text-align: center;
+}
+.left_txt h1 {
+  margin-bottom: 1vw;
+}
+.left_txt h1 span {
+  display: block;
+  float: left;
+}
+.left_txt h1 span:first-child {
+  text-indent: -500px;
+  animation: dorpDown 2s alternate;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.left_txt h1 span:nth-child(2) {
+  text-indent: -500px;
+  animation: dorpDown 2s alternate;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+.left_txt h1 span:last-child {
+  text-indent: -500px;
+  animation: dorpDown 2s alternate;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+@keyframes dorpDown {
+  0% {
+    margin-top: -500px;
+  }
+  10% {
+    text-indent: -70px;
+    transform: rotate(-10deg);
+  }
+  20% {
+    text-indent: 0px;
+    transform: rotate(10deg);
+  }
+  30% {
+    text-indent: -60px;
+    transform: rotate(-30deg);
+  }
+  40% {
+    text-indent: 0px;
+    transform: rotate(20deg);
+  }
+  50% {
+    text-indent: -50px;
+    transform: rotate(-10deg);
+  }
+  60% {
+    text-indent: 0px;
+  }
+  70% {
+    text-indent: -30px;
+  }
+  100% {
+    text-indent: 0px;
+    transform: rotate(0deg);
+  }
+}
+.left_txt p {
+  font-weight: bold;
+}
+/* 타블렛 이미지 */
+.tablet > img {
+  width: 28vw;
+  background-color: #333;
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  border-radius: 38px;
+  z-index: 200;
+  transition: all 0.5s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.tablet > img.active {
+  background-color: transparent;
+  z-index: 100;
+}
+/* 로딩 */
+.loading {
+  font-family: "HSYuji-Regular";
+  position: absolute;
+  top: 11.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2vw;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  width: 24.8vw;
+  height: 37.5vw;
+  z-index: 102;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.loading p {
+  width: 20vw;
+  height: 20vw;
+  text-align: center;
+  line-height: 37.5vw;
+  margin: 0 auto;
+}
+.loading ul {
+  display: block;
+  margin: 0 auto;
+  width: 20vw;
+  height: 1vw;
+  display: flex;
+  justify-content: center;
+}
+.loading ul li {
+  font-size: 1vw;
+  letter-spacing: 0.5vw;
+}
+.loading ul li:first-child {
+  animation: loading 2s linear infinite;
+}
+.loading ul li:nth-child(2) {
+  animation: loading 1s linear infinite;
+}
+.loading ul li:nth-child(3) {
+  animation: loading 2s linear infinite;
+}
+.loading ul li:nth-child(4) {
+  animation: loading 1s linear infinite;
+}
+.loading ul li:nth-child(5) {
+  animation: loading 2s linear infinite;
+}
+.loading ul li:nth-child(6) {
+  animation: loading 3s linear infinite;
+}
+.loading ul li:nth-child(7) {
+  animation: loading 1s linear infinite;
+}
+.loading ul li:nth-child(8) {
+  animation: loading 2s linear infinite;
+}
+.loading ul li:last-child {
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    margin-top: 0.1vw;
+  }
+  25% {
+    margin-top: 0.2vw;
+  }
+  50% {
+    margin-top: 0.3vw;
+  }
+  75% {
+    margin-top: 0.2vw;
+  }
+  100% {
+    margin-top: 0.1vw;
+  }
+}
+/* 썸네일 */
+.bx-wrapper {
+  position: absolute;
+  width: 24.8vw;
+  height: 37.7vw;
+  top: 5.6vw;
+  margin-bottom: 0;
+  z-index: 101;
+}
+.bx-pager-item {
+  margin-bottom: 40px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #fff;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: lightcoral;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: lightcoral;
+}
+.bx-viewport {
+  width: 100%;
+  height: 100%;
+}
+.bx-viewport .bxslider {
+  width: 100%;
+  height: 100%;
+}
+.bxslider > div {
+  width: 24.9vw;
+  height: 37.6vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide1 {
+  background-image: url(../img/background.jpg);
+}
+.slide1 ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-top: 1vw;
+}
+.slide1 ul li {
+  width: 6vw;
+}
+.slide1 ul li div {
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.slide1 ul li div:hover {
+  transform: scale(1.2);
+}
+.slide1 ul li p {
+  text-align: center;
+  font-size: 0.7vw;
+  font-weight: bold;
+}
+.slide2 {
+  background-image: url(../img/wallpaper2.jpg);
+}
+.slide3 {
+  background-image: url(../img/wallpaper1.jpg);
+}
+/* 팝업 */
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup_in {
+  width: 25vw;
+  height: 37.6vw;
+  background-color: #333;
+  position: absolute;
+  top: 5.56vw;
+  left: 37.5%;
+  z-index: 150;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.p1.active {
+  transform: scale(1);
+  visibility: visible;
+}
+.p2.active {
+  transform: scale(1);
+  visibility: visible;
+}
+.p3.active {
+  transform: scale(1);
+  visibility: visible;
+}
+.p4.active {
+  transform: scale(1);
+  visibility: visible;
+}
+.p5.active {
+  transform: scale(1);
+  visibility: visible;
+}
+.close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 12%;
+  left: 60%;
+  cursor: pointer;
+  z-index: 200;
+  visibility: hidden;
+  transform: rotate(-90deg);
+  transition: all 1s;
+  opacity: 0;
+}
+.close.active {
+  visibility: visible;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10%;
+  height: 60%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  background-color: #fff;
+}
+.close::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+/* 태블릿 배경 */
+/* .background {
+  display: none;
+  position: absolute;
+  z-index: 100;
+}
+.background img {
+  width: 25.1vw;
+  height: 37.7vw;
+  position: absolute;
+  top: 11.4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  transition: all 0.5s;
+} */
+/* 오른쪽 텍스트 */
+.right_txt {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  right: 10vw;
+  color: #fff;
+  text-align: center;
+}
+.right_txt h1 {
+  margin-bottom: 1vw;
+}
+.right_txt p {
+  line-height: 1.2vw;
+  font-weight: bold;
+}
+/* 전원 버튼 */
+.tablet .tablet_btn {
+  position: absolute;
+  bottom: 4.5vw;
+  width: 1vw;
+  height: 1vw;
+  background-color: transparent;
+  border-radius: 100%;
+  text-indent: -9999px;
+  z-index: 201;
+}
+/* click 화살표 */
+.tablet_on {
+  position: absolute;
+  bottom: 1.2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: all 2s;
+}
+.tablet_on.active {
+  opacity: 0;
+}
+.tablet_on img {
+  position: absolute;
+  width: 1vw;
+  bottom: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: arrow 1s infinite;
+}
+@keyframes arrow {
+  0% {
+    bottom: 1vw;
+  }
+  100% {
+    bottom: 1.3vw;
+  }
+}
+.tablet_on p {
+  font-weight: bold;
+  color: #fff;
+}
